@@ -1,0 +1,15 @@
+<p>
+    <% review.rating.times do |star| %>
+      ★
+    <% end %>
+
+    <% (5 - review.rating).times do |star| %>
+      ☆
+    <% end %>
+
+
+</p>
+
+<p><%= review.content %></p>
+
+<hr>

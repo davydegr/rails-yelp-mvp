@@ -1,0 +1,13 @@
+<h1><%= @restaurant.name %></h1>
+
+<p>This restaurant is located in <%= @restaurant.address %>. You can have amazing <%= @restaurant.category %> food there!</p>
+
+<%= link_to "Back to overview", restaurants_path %>
+
+<h2>Reviews for this restaurant</h2>
+
+<% @restaurant.reviews.each do |review| %>
+  <%= render "display_review", review: review %>
+<% end %>
+
+<%= link_to "Add a review for this restaurant", new_restaurant_review_path(@restaurant) %>
